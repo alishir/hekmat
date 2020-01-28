@@ -1,0 +1,11 @@
+html, body, #___gatsby {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+}
+
+div[role="group"][tabindex] {
+    height: 100%;
+}
