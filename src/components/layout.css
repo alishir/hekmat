@@ -9,3 +9,8 @@ body {
 div[role="group"][tabindex] {
     height: 100%;
 }
+
+@font-face {
+  font-family: "Arabic";
+  src: url("../../static/fonts/arabic_font.ttf")   format("truetype");
+} 

@@ -41,23 +41,23 @@ const Wrapper = styled.div`
 `
 
 const Arabic = styled.h3`
+  font-family: Arabic;
   direction: rtl;
   margin 2rem 2rem;
-  font-family: Noto Naskh Arabic;
-  
+  font-size: 1.8em;
 `;
 
 const Persian = styled.h3`
   direction: rtl;
   margin 2rem 2rem;
-  font-family: Noto Naskh Arabic UI;
+  font-family: Noto Naskh Arabic;
 `;
 
 
 const NextButton = styled.img`
   margin 1rem 2rem;
-  max-width: 5%;
-  min-width: 10%;
+  max-width: 15%;
+  width: 64px;
 `;
 
 const PreButton = styled(NextButton)`
@@ -70,21 +70,23 @@ export default class TagTemplate extends React.Component {
     const cont = this.props.pageContext
     const hekmat = this.props.data.hekmatsJson
     return (
+      <Layout>
 	<Wrapper>
 	  <div>
 	    <Arabic>{hekmat.ar}</Arabic>
 	    <hr align="center" width="50%"/>
 	    <Persian>{hekmat.fa}</Persian>
 	    <div>
-	<a href="salam.txt">
-	<PreButton src="/next.png"/>
-	</a>
-	<a href="salam.txt">
-	<NextButton src="/next.png"/>
-	</a>
+		<a href="salam.txt">
+		<PreButton src="/next.png"/>
+		</a>
+		<a href="salam.txt">
+		<NextButton src="/next.png"/>
+		</a>
 	    </div>
 	  </div>
 	</Wrapper>
+     </Layout>
     )
   }
 }

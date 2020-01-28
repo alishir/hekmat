@@ -17,5 +17,14 @@ module.exports = {
 				path: `./src/data/`,
 			},
 		},
+		{
+			resolve: "gatsby-plugin-web-font-loader",
+			options: {
+				custom: {
+					families: ["Arabic"],
+					urls: ["/fonts/fonts.css"],
+				},
+			},
+		}
 	],
 }
