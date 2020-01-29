@@ -134,21 +134,20 @@ export default class Hekmat extends React.Component {
     const hekmat = this.props.data.hekmatsJson
     const num = Number(slug.replace(/\//g, '')).toLocaleString('fa-IR')
     return (
-      <Layout>
-	<Container>
-	
-      <Header>
-	<Info>حکمت {num}</Info>
-	<AmirHeadear>قال امیرالمومنین علیه السلام:</AmirHeadear>
-	</Header>
-	  <Wrapper>
-	    <Arabic>{hekmat.ar}</Arabic>
-	    <hr align="center" width="50%"/>
-	    <Persian>{hekmat.fa}</Persian>
-	  </Wrapper>
-	<GenerateNav next={next} pre={previous}/>
-	</Container>
-     </Layout>
+	<Layout>
+	    <Container>
+		<Header>
+		    <Info>حکمت {num}</Info>
+		    <AmirHeadear>قال امیرالمومنین علیه السلام:</AmirHeadear>
+		</Header>
+		<Wrapper>
+		    <Arabic>{hekmat.ar}</Arabic>
+		    <hr align="center" width="50%"/>
+		    <Persian>{hekmat.fa}</Persian>
+		</Wrapper>
+		<GenerateNav next={next} pre={previous}/>
+	    </Container>
+	</Layout>
     )
   }
 }
