@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{RXBc:function(e,n,t){"use strict";t.r(n);var o=t("q1tI"),a=t.n(o),c=t("YwZP");n.default=function(e){var n=e.data;return console.log(n),a.a.createElement(c.Redirect,{noThrow:!0,to:"hekmat/1"})}}}]);
+//# sourceMappingURL=component---src-pages-index-js-05ae269676624abd6372.js.map
