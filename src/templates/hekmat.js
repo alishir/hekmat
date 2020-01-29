@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
+import NextImg from "../../static/next.png"
 
 /*
 const LongArabic = styled.textarea`
@@ -93,9 +94,42 @@ const Info = styled.h5`
 `;
 
 
+function GenerateNav(props) {
+  const next = props.next
+  const pre = props.pre
+  if (next !== null && pre !== null) {
+    return (
+      <HekmatNav>
+      <a href={pre.fields.slug}>
+      <PreButton src={NextImg}/>
+      </a>
+      <a href={next.fields.slug}>
+      <NextButton src={NextImg}/>
+      </a>
+	</HekmatNav>
+    );
+  } else if (next !== null) {
+    return (
+      <HekmatNav>
+      <a href={next.fields.slug}>
+      <NextButton src={NextImg}/>
+      </a>
+	</HekmatNav>
+    );
+  } else if (pre !== null) {
+    return (
+      <HekmatNav>
+      <a href={pre.fields.slug}>
+      <PreButton src={NextImg}/>
+      </a>
+	</HekmatNav>
+    );
+  }
+}
+
 export default class Hekmat extends React.Component {
   render() {
-    // const cont = this.props.pageContext
+    const { next, previous } = this.props.pageContext
     const hekmat = this.props.data.hekmatsJson
     return (
       <Layout>
@@ -110,14 +144,7 @@ export default class Hekmat extends React.Component {
 	    <hr align="center" width="50%"/>
 	    <Persian>{hekmat.fa}</Persian>
 	  </Wrapper>
-	  <HekmatNav>
-	    <a href="salam.txt">
-	    <PreButton src="/next.png"/>
-	    </a>
-	    <a href="salam.txt">
-	    <NextButton src="/next.png"/>
-	    </a>
-	  </HekmatNav>
+	<GenerateNav next={next} pre={previous}/>
 	</Container>
      </Layout>
     )
