@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 
-
+/*
 const LongArabic = styled.textarea`
   font-family: Noto Naskh Arabic UI;
   border: none;
@@ -31,32 +31,45 @@ const LongPersian = styled.textarea`
   direction: rtl;
   max-height: 50%;
 `;
+*/
 
-const Wrapper = styled.div`
+const Container = styled.div`
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: flex-start;
 `
+
+const Wrapper = styled.div`
+  align-self: center;
+`;
+
+const HekmatNav = styled.div`
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+`;
 
 const Arabic = styled.h3`
   font-family: Arabic;
   direction: rtl;
   margin 2rem 2rem;
   font-size: 1.8em;
+  text-align: center;
 `;
 
 const Persian = styled.h3`
+  font-family: Noto Naskh Arabic;
   direction: rtl;
   margin 2rem 2rem;
-  font-family: Noto Naskh Arabic;
+  text-align: center;
 `;
 
 
 const NextButton = styled.img`
-  margin 1rem 2rem;
-  max-width: 15%;
+/*  max-width: 15%; */
+  margin: 2rem 2rem;
   width: 64px;
 `;
 
@@ -64,28 +77,48 @@ const PreButton = styled(NextButton)`
   transform: rotate(180deg);
 `;
 
+const Header = styled.div`
+  align-self: center;
+`;
+const AmirHeadear = styled.h4`
+  text-align: center;
+  font-family: Noto Naskh Arabic;
+  direction: rtl;
+`;
 
-export default class TagTemplate extends React.Component {
+const Info = styled.h5`
+  text-align: center;
+  font-family: Noto Naskh Arabic;
+  direction: rtl;
+`;
+
+
+export default class Hekmat extends React.Component {
   render() {
-    const cont = this.props.pageContext
+    // const cont = this.props.pageContext
     const hekmat = this.props.data.hekmatsJson
     return (
       <Layout>
-	<Wrapper>
-	  <div>
+	<Container>
+	
+      <Header>
+	<Info>حکمت ۱</Info>
+	<AmirHeadear>قال امیرالمومنین علیه السلام:</AmirHeadear>
+	</Header>
+	  <Wrapper>
 	    <Arabic>{hekmat.ar}</Arabic>
 	    <hr align="center" width="50%"/>
 	    <Persian>{hekmat.fa}</Persian>
-	    <div>
-		<a href="salam.txt">
-		<PreButton src="/next.png"/>
-		</a>
-		<a href="salam.txt">
-		<NextButton src="/next.png"/>
-		</a>
-	    </div>
-	  </div>
-	</Wrapper>
+	  </Wrapper>
+	  <HekmatNav>
+	    <a href="salam.txt">
+	    <PreButton src="/next.png"/>
+	    </a>
+	    <a href="salam.txt">
+	    <NextButton src="/next.png"/>
+	    </a>
+	  </HekmatNav>
+	</Container>
      </Layout>
     )
   }

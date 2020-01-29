@@ -9,10 +9,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     console.log(fileNode.relativePath)
     const slug = createFilePath({ node, getNode, basePath: `data/hekmats/` })
     console.log(slug)
+    const short_slug = slug.replace("/hekmats","")
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: short_slug,
     })
   }
 }
