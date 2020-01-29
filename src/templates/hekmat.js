@@ -129,14 +129,15 @@ function GenerateNav(props) {
 
 export default class Hekmat extends React.Component {
   render() {
-    const { next, previous } = this.props.pageContext
+    const { next, previous, slug} = this.props.pageContext
     const hekmat = this.props.data.hekmatsJson
+    const num = Number(slug.replace(/\//g, '')).toLocaleString('fa-IR')
     return (
       <Layout>
 	<Container>
 	
       <Header>
-	<Info>حکمت ۱</Info>
+	<Info>حکمت {num}</Info>
 	<AmirHeadear>قال امیرالمومنین علیه السلام:</AmirHeadear>
 	</Header>
 	  <Wrapper>

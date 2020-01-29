@@ -8,7 +8,7 @@
 
 module.exports = {
 	/* Your site config here */
-	pathPrefix: "/hekmats",
+	pathPrefix: "/hekmat",
 	plugins: [
 		`gatsby-plugin-styled-components`,
 		`gatsby-transformer-json`,
