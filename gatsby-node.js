@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allHekmatsJson(sort: {fields: fields___slug}) {
+      allHekmatsJson(sort: {fields: No, order: ASC}) {
 	edges {
 	  node {
 	    fields {
