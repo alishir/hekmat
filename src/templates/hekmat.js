@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import NextImg from "../../static/next.png"
@@ -100,28 +101,28 @@ function GenerateNav(props) {
   if (next !== null && pre !== null) {
     return (
       <HekmatNav>
-      <a href={pre.fields.slug}>
+      <Link to={pre.fields.slug}>
       <PreButton src={NextImg}/>
-      </a>
-      <a href={next.fields.slug}>
+      </Link>
+      <Link to={next.fields.slug}>
       <NextButton src={NextImg}/>
-      </a>
+      </Link>
 	</HekmatNav>
     );
   } else if (next !== null) {
     return (
       <HekmatNav>
-      <a href={next.fields.slug}>
+      <Link to={next.fields.slug}>
       <NextButton src={NextImg}/>
-      </a>
+      </Link>
 	</HekmatNav>
     );
   } else if (pre !== null) {
     return (
       <HekmatNav>
-      <a href={pre.fields.slug}>
+      <Link to={pre.fields.slug}>
       <PreButton src={NextImg}/>
-      </a>
+      </Link>
 	</HekmatNav>
     );
   }

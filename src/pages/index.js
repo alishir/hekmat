@@ -5,7 +5,7 @@ import { Redirect } from '@reach/router'
 export default ({ data }) => {
   console.log(data)
   return(
-    <Redirect noThrow to="/1" />
+    <Redirect noThrow to="/hekmat/1" />
   )
 }
 

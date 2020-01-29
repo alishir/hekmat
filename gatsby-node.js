@@ -4,6 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `HekmatsJson`) {
+    console.log("=========================")
     console.log(node.internal.type)
     const fileNode = getNode(node.parent)
     console.log(fileNode.relativePath)
@@ -25,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allHekmatsJson {
+      allHekmatsJson(sort: {fields: fields___slug}) {
 	edges {
 	  node {
 	    fields {
