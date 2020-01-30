@@ -138,7 +138,7 @@ export default class Hekmat extends React.Component {
 	    <Container>
 		<Header>
 		    <Info>حکمت {num}</Info>
-		    <AmirHeadear>قال امیرالمومنین علیه السلام:</AmirHeadear>
+		    <AmirHeadear>قال امیرالمومنین علی علیه السلام:</AmirHeadear>
 		</Header>
 		<Wrapper>
 		    <Arabic>{hekmat.ar}</Arabic>
