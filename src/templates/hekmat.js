@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import NextImg from "../../static/next.png"
+import NextImg from "../../static/images/next.png"
 import SEO from '../components/SEO'
 
 /*
