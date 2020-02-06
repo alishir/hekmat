@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import NextImg from "../../static/next.png"
+import SEO from '../components/SEO'
 
 /*
 const LongArabic = styled.textarea`
@@ -135,6 +136,7 @@ export default class Hekmat extends React.Component {
     const num = Number(slug.replace(/\//g, '')).toLocaleString('fa-IR')
     return (
 	<Layout>
+	    <SEO />
 	    <Container>
 		<Header>
 		    <Info>حکمت {num}</Info>

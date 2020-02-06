@@ -4,12 +4,12 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `HekmatsJson`) {
-    console.log("=========================")
-    console.log(node.internal.type)
+    // console.log("=========================")
+    // console.log(node.internal.type)
     const fileNode = getNode(node.parent)
-    console.log(fileNode.relativePath)
+    // console.log(fileNode.relativePath)
     const slug = createFilePath({ node, getNode, basePath: `data/hekmats/` })
-    console.log(slug)
+    // console.log(slug)
     const short_slug = slug.replace("/hekmats","")
     createNodeField({
       node,
@@ -47,7 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  console.log(JSON.stringify(result, null, 4))
+  // console.log(JSON.stringify(result, null, 4))
 
   result.data.allHekmatsJson.edges.forEach(({ node, next, previous }) => {
     createPage({
