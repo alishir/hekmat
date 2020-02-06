@@ -11,7 +11,7 @@ module.exports = {
   pathPrefix: "/hekmat",
   siteMetadata: {
     title: "حکم امیرالمومنین علیه السلام",
-    titleTemplate: "%s · حکم امیرالمومنین(ع)",
+    titleTemplate: "حکم امیرالمومنین(ع) - %s",
     description:
     "حکمت‌ها و کلمات قصار امیرالمومنین علی علیه السلام",
     url: "https://alishir.github.io/hekmat", // No trailing slash allowed!

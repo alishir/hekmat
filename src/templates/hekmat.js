@@ -134,12 +134,13 @@ export default class Hekmat extends React.Component {
     const { next, previous, slug} = this.props.pageContext
     const hekmat = this.props.data.hekmatsJson
     const num = Number(slug.replace(/\//g, '')).toLocaleString('fa-IR')
+    const InfoTxt = "حکمت " + num
     return (
 	<Layout>
-	    <SEO />
+	    <SEO title={InfoTxt} />
 	    <Container>
 		<Header>
-		    <Info>حکمت {num}</Info>
+	            <Info>{InfoTxt}</Info>
 		    <AmirHeadear>قال امیرالمومنین علی علیه السلام:</AmirHeadear>
 		</Header>
 		<Wrapper>
