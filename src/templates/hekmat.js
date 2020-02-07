@@ -3,7 +3,8 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import NextImg from "../../static/next.png"
+import NextImg from "../../static/images/next.png"
+import SEO from '../components/SEO'
 
 /*
 const LongArabic = styled.textarea`
@@ -133,11 +134,13 @@ export default class Hekmat extends React.Component {
     const { next, previous, slug} = this.props.pageContext
     const hekmat = this.props.data.hekmatsJson
     const num = Number(slug.replace(/\//g, '')).toLocaleString('fa-IR')
+    const InfoTxt = "حکمت " + num
     return (
 	<Layout>
+	    <SEO title={InfoTxt} />
 	    <Container>
 		<Header>
-		    <Info>حکمت {num}</Info>
+	            <Info>{InfoTxt}</Info>
 		    <AmirHeadear>قال امیرالمومنین علی علیه السلام:</AmirHeadear>
 		</Header>
 		<Wrapper>
