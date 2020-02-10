@@ -6,52 +6,35 @@ import Layout from "../components/layout"
 import NextImg from "../../static/images/next.png"
 import SEO from '../components/SEO'
 
-/*
-const LongArabic = styled.textarea`
-  font-family: Noto Naskh Arabic UI;
-  border: none;
-  resize: none;
-  
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  text-align: center;
-  direction: rtl;
-  height: 50%;
-  max-height: 50%;
-`;
-
-const LongPersian = styled.textarea`
-  font-family: Noto Naskh Arabic UI;
-  resize: none;
-  border: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  text-align: center;
-  direction: rtl;
-  max-height: 50%;
-`;
-*/
 
 const Container = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: flex-start;
+  position: relative;
+`
+
+const CenterArea = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
 `
 
 const Wrapper = styled.div`
-  align-self: center;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
 `;
 
 const HekmatNav = styled.div`
-  display: flex;
-  align-self: center;
-  justify-content: space-between;
+  text-align: center;
 `;
 
 const Arabic = styled.h3`
@@ -139,6 +122,7 @@ export default class Hekmat extends React.Component {
 	<Layout>
 	    <SEO title={InfoTxt} />
 	    <Container>
+             <CenterArea>
 		<Header>
 	            <Info>{InfoTxt}</Info>
 		    <AmirHeadear>قال امیرالمومنین علی علیه السلام:</AmirHeadear>
@@ -149,8 +133,9 @@ export default class Hekmat extends React.Component {
 		    <Persian>{hekmat.fa}</Persian>
 		</Wrapper>
 		<GenerateNav next={next} pre={previous}/>
+             </CenterArea>
 	    </Container>
-	</Layout>
+	</Layout> 
     )
   }
 }
