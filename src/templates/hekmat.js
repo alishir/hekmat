@@ -68,13 +68,13 @@ const Header = styled.div`
 `;
 const AmirHeadear = styled.h4`
   text-align: center;
-  font-family: Noto Naskh Arabic;
+  font-family: Persian;
   direction: rtl;
 `;
 
 const Info = styled.h5`
   text-align: center;
-  font-family: Noto Naskh Arabic;
+  font-family: Persian;
   direction: rtl;
 `;
 

@@ -12,5 +12,10 @@ div[role="group"][tabindex] {
 
 @font-face {
   font-family: "Arabic";
-  src: url("../../static/fonts/arabic_font.ttf")   format("truetype");
+  src: url("../../static/fonts/arabic.ttf")   format("truetype");
+} 
+
+@font-face {
+  font-family: "Persian";
+  src: url("../../static/fonts/persian.ttf")   format("truetype");
 } 
