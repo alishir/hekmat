@@ -31,7 +31,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
 	custom: {
-	  families: ["Arabic"],
+	  families: ["Arabic", "Persian"],
 	  urls: ["/fonts/fonts.css"],
 	},
       },
