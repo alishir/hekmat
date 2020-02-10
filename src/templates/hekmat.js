@@ -46,7 +46,7 @@ const Arabic = styled.h3`
 `;
 
 const Persian = styled.h3`
-  font-family: Noto Naskh Arabic;
+  font-family: Persian;
   direction: rtl;
   margin 2rem 2rem;
   text-align: center;
