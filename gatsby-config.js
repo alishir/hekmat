@@ -15,7 +15,7 @@ module.exports = {
     description:
     "حکمت‌ها و کلمات قصار امیرالمومنین علی علیه السلام",
     url: "https://alishir.github.io/hekmat", // No trailing slash allowed!
-    image: "/images/logo.png?2", // Path to your image you placed in the 'static' folder
+    image: "/images/logo.png?3", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-styled-components`,
